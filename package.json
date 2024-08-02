@@ -1,0 +1,10 @@
+{
+  "name": "turbo_filter_demo",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "turbo run build --filter='@tfd/*[HEAD^1]'"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.11"
+  }
+}
