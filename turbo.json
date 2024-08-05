@@ -13,12 +13,6 @@
       "outputs": [
         "dist/**"
       ]
-    },
-    "build:test": {
-      "dependsOn": ["^build:test"],
-      "outputs": [
-        "dist/**"
-      ]
     }
   }
 }
