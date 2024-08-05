@@ -1,11 +1,14 @@
-FROM node:20-alpine
+FROM node:20
 
 WORKDIR /home/node/app
 
-COPY . ./
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
 
-# USER node
+RUN git clone https://github.com/long-woo/turbo_filter_demo.git
 
-RUN npm i --global pnpm
-
-RUN pnpm install && pnpm build
+RUN npm i --global pnpm && \
+    cd ./turbo_filter_demo && \
+    pnpm install && \
+    pnpm build
